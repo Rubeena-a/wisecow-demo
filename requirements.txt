@@ -1,0 +1,8 @@
+# This requirements.txt file lists the Python dependencies needed for the project.
+# Each package is pinned to a specific version for reproducibility.
+
+
+# Flask is a lightweight WSGI web application framework
+flask==2.2.5
+# Gunicorn is a Python WSGI HTTP Server for UNIX
+gunicorn==20.1.0
