@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Define a route for the root URL ('/')
 @app.route('/')
 def hello():
-    return "Hello from Wisecow App - AccuKnox Demo!"
+    return "Hello from Flask Healthcheck Demo!"
 
     # You can add more routes below to handle different URLs
 
