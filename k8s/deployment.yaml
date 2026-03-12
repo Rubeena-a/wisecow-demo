@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wisecow-deployment
-  namespace: wisecow
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: wisecow
@@ -14,13 +13,7 @@ spec:
         app: wisecow
     spec:
       containers:
-      - name: wisecow
-        image: <YOUR_DOCKER_USERNAME>/wisecow:latest
+      - name: wisecow-container
+        image: rubi58/wisecow:latest
         ports:
-        - containerPort: 8080
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 10
+        - containerPort: 4499

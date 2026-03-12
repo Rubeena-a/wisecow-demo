@@ -1,20 +1,23 @@
-FROM python:3.10-slim
+#FROM python:3.10-slim
 # Uses the official Python 3.10 slim image as the base for a lightweight container.
+FROM ubuntu:22.04
 
+# Install dependencies
+RUN apt-get update && \
+    apt-get install -y cowsay fortune-mod netcat-openbsd && \
+    apt-get clean
+
+# Set working directory
 WORKDIR /app
-# Sets the working directory inside the container to /app.
 
-COPY requirements.txt .
-# Copies requirements.txt from project into the container.
+# Copy application script
+COPY wisecow/wisecow.sh .
 
-RUN pip install --no-cache-dir -r requirements.txt
-# Installs Python dependencies listed in requirements.txt without caching.
+# Make script executable
+RUN chmod +x wisecow.sh
 
-COPY app.py .
-# Copies main application file (app.py) into the container.
+# Expose application port
+EXPOSE 4499
 
-EXPOSE 8080
-# Informs Docker that the container will listen on port 8080.
-
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app", "--workers", "2"]
-# Sets the default command to run Gunicorn, binding to all interfaces on port 8080, serving the app object from app.py, with 2 worker processes.
+# Run application
+CMD ["./wisecow.sh"]
