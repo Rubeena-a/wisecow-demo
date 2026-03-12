@@ -11,7 +11,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy application script
-COPY wisecow/wisecow.sh .
+COPY wisecow-app/wisecow.sh .
 
 # Make script executable
 RUN chmod +x wisecow.sh
