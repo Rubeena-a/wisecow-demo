@@ -53,3 +53,22 @@ docker ps
 ## Kubernetes Deployment
 
 ![alt text](Outputs/image-9.png)
+### Start Minikube
+
+```bash
+
+minikube start
+```
+
+### Verify Cluster Is Running
+
+```bash
+kubectl get nodes
+```
+![alt text](image.png)
+
+
+### Apply Deployment 
+
+
+![alt text](image-1.png)
