@@ -65,10 +65,29 @@ minikube start
 ```bash
 kubectl get nodes
 ```
-![alt text](image.png)
+![alt text](Outputs/image-10.png)
 
 
 ### Apply Deployment 
 
 
-![alt text](image-1.png)
+![alt text](Outputs/image-11.png)
+
+
+![alt text](Outputs/image-13.png)
+
+# Kubernetes Service
+
+![alt text](Outputs/image-12.png)
+
+### Access  the Application:
+
+![alt text](Outputs/image-14.png)
+
+### Verify
+
+![alt text](Outputs/Verifying-Kubernetes-Service.png)
+
+
+![alt text](Outputs/Application-Reachable-through-Browser.png)
+
