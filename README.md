@@ -91,3 +91,17 @@ kubectl get nodes
 
 ![alt text](Outputs/Application-Reachable-through-Browser.png)
 
+
+![alt text](image.png)
+
+### Verify Ingress Controller
+
+
+![alt text](Outputs/Verify-Ingress-Controller.png)
+
+
+# Kubernetes Ingress
+
+### Apply
+
+![alt text](Outputs/Ingress-Apply.png)
