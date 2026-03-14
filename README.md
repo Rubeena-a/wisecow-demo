@@ -138,6 +138,18 @@ Checks:
 - Applied Zero Trust Security Policy
 - Detected security violations inside container
 
+
+```bash
+$ ./karmor.exe version
+karmor version 1.4.6 windows/amd64 BuildDate=2025-11-20T08:16:36Z
+current version is the latest
+```
+
+### Install KubeArmor in the Cluster 
+
+```bash
+./karmor.exe install
+```
 ---
 
 ## Screenshots
@@ -164,6 +176,11 @@ Checks:
 - Bash scripting
 - Python
 - KubeArmor
+
+
+
+
+
 
 
 
