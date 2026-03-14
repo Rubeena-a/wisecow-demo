@@ -26,34 +26,36 @@ Project Features:
 ```bash
 docker ps
 ```
-![Running Container](Outputs/image.png)
+![Running Container](Outputs/Containers-Created.png)
+
 
 ### Browser Output
-![alt text](Outputs/image-1.png)
+![alt text](Outputs/App-Local-Test-4499.png)
 
 ### Curl Output
-![alt text](Outputs/image-2.png)
+![alt text](Outputs/App-Cmd-Line-Test-Curl.png)
 
-### Docker Image 
+### Docker Images
 
-![alt text](Outputs/image-3.png)
+![alt text](Outputs/Docker-Image-Cmd-Output.png)
 
 ### Repsitories
-![alt text](Outputs/image-7.png)
-![alt text](Outputs/image-8.png)
+![alt text](Outputs/Docker-Hub-Repo.png)
+![alt text](Outputs/DockerHub-Repo-Wisecow-General.png)
 
-### Images
-![alt text](Outputs/image-5.png)
+### Docker Desktop Images
+![alt text](Outputs/Docker-Desktop-Images.png)
 
 ### Login to docker hub 
-![alt text](Outputs/image-4.png)
+![alt text](Outputs/Docker-Hub-Login-In-Bash.png)
 
 ### Docker Push 
-![alt text](Outputs/image-6.png)
+![alt text](Outputs/Docker-Push-Bash-Cmd.png)
 
 ## Kubernetes Deployment
 
-![alt text](Outputs/image-9.png)
+![alt text](Outputs/Minikube-Kubectl-Versions.png)
+
 ### Start Minikube
 
 ```bash
@@ -66,43 +68,43 @@ minikube start
 ```bash
 kubectl get nodes
 ```
-![alt text](Outputs/image-10.png)
+![alt text](Outputs/Kubectl-Get-Nodes-Verify-Cluster-Running.png)
 
 
 ### Apply Deployment 
 
 
-![alt text](Outputs/image-11.png)
+![alt text](Outputs/Kubectl-Apply-Deployment-Get-Pods.png)
 
 
-![alt text](Outputs/image-13.png)
+![alt text](Outputs/Kubectl-Logs-Get-Deployments-Pods.png)
 
 # Kubernetes Service
 
-![alt text](Outputs/image-12.png)
+![alt text](Outputs/Kubectl-Apply-Service-Get-Service.png)
 
 ### Access  the Application:
 
-![alt text](Outputs/image-14.png)
+![alt text](Outputs/Access-Service-Minikube-Service-Wisecow-Service.png)
 
 ### Verify
 
-![alt text](Outputs/Verifying-Kubernetes-Service.png)
+![alt text](Outputs/Verifying-Kubernetes-Service-Get-Svc.png)
 
 
-![alt text](Outputs/Application-Reachable-through-Browser.png)
+![alt text](Outputs/K8s-Service-Reachable-through-Browser-With-IP.png)
 
 
-![alt text](image.png)
+![alt text](Outputs/Enable-Ingress-On-Minikube-Addon.png)
 
 ### Verify Ingress Controller
 
 
-![alt text](Outputs/Verify-Ingress-Controller.png)
+![alt text](Outputs/Verify-Ingress-Controller-Get-Pods.png)
 
 
 # Kubernetes Ingress
 
 ### Apply
 
-![alt text](Outputs/Ingress-Apply.png)
+![alt text](Outputs/Kubectl-Ingress-Apply-Get-Ingress.png)
