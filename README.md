@@ -129,6 +129,8 @@ Checks:
 - Application availability
 - HTTP status response
 
+![alt text](image.png)
+
 ---
 
 ## Problem Statement 3: Runtime Security
@@ -150,7 +152,55 @@ current version is the latest
 ```bash
 ./karmor.exe install
 ```
+![alt text](Outputs/Karmor-Install.png)
+
+### Kubectl Get Pods
+![alt text](Outputs/Kubearmor-Kubectl-Get-Pods.png)
+
+### Confirm Wisecom is Still Running
+![alt text](Outputs/Confirm-Wisecom-is-Still-Running.png)
+
+### Apply Security Policy
+
+
+![alt text](Outputs/Apply-Security-Policy.png)
+
+### Verify Policy
+![alt text](Outputs/Kubearmor-Verify-Policy.png)
+
+### Apply Wisecow Block Sensitive File Policy
+
+![alt text](Outputs/Apply-Wisecow-Block-Sensitive-File-Policy-Configured.png)
+
+
+
+### Verify Policy Exists and Pod Label
+
+![alt text](Outputs/Verify-Policy-Exists-and-Pod-Label.png)
+
+
+
+
+### Monitoring Karmor Logs
+![alt text](Outputs/Monitoring-Karmor-Logs.png)
+
+
+### Wisecow-BLock-Passwd-Access-Policy-Created
+
+![alt text](Outputs/Wisecow-Block-Passwd-Access-Policy-Created.png)
+
+
+## Attempt to Access Blocked File
+
+### Policy Created and Policy Details
+
+![alt text](Outputs/Policy-Created-and-Policy-Details.png)
+
+
+
+
 ---
+
 
 ## Screenshots
 
