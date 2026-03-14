@@ -1,24 +1,17 @@
-# Cow wisdom web server
+# Wisecow DevOps Project
 
-Wisecow DevOps Deployment
+## Project Overview
 
-This project demonstrates containerization and deployment of the Wisecow application using Docker and Kubernetes.
+This project demonstrates containerization, Kubernetes deployment, CI/CD automation, monitoring scripts, and runtime security implementation for the Wisecow application.
 
-Technologies Used:
-- Docker
-- Kubernetes
-- GitHub Actions
-- Bash / Python
+---
 
-Project Features:
-- Dockerized Wisecow application
-- Kubernetes deployment
-- CI/CD pipeline using GitHub Actions
-- System monitoring script
-- Application health check script
+## Problem Statement 1: Containerization and Deployment
 
-##
-
+### Dockerization
+- Created Dockerfile for Wisecow application
+- Built Docker image
+- Pushed image to DockerHub
 
 ## Application Output
 
@@ -39,7 +32,7 @@ docker ps
 
 ![alt text](Outputs/Docker-Image-Cmd-Output.png)
 
-### Repsitories
+### Docker Hub Repsitories
 ![alt text](Outputs/Docker-Hub-Repo.png)
 ![alt text](Outputs/DockerHub-Repo-Wisecow-General.png)
 
@@ -52,7 +45,10 @@ docker ps
 ### Docker Push 
 ![alt text](Outputs/Docker-Push-Bash-Cmd.png)
 
-## Kubernetes Deployment
+### Kubernetes Deployment
+- Created Deployment YAML
+- Exposed application using NodePort Service
+- Configured Ingress for domain-based routing
 
 ![alt text](Outputs/Minikube-Kubectl-Versions.png)
 
@@ -79,6 +75,8 @@ kubectl get nodes
 
 ![alt text](Outputs/Kubectl-Logs-Get-Deployments-Pods.png)
 
+
+
 # Kubernetes Service
 
 ![alt text](Outputs/Kubectl-Apply-Service-Get-Service.png)
@@ -95,6 +93,8 @@ kubectl get nodes
 ![alt text](Outputs/K8s-Service-Reachable-through-Browser-With-IP.png)
 
 
+# Kubernetes Ingress 
+
 ![alt text](Outputs/Enable-Ingress-On-Minikube-Addon.png)
 
 ### Verify Ingress Controller
@@ -103,8 +103,67 @@ kubectl get nodes
 ![alt text](Outputs/Verify-Ingress-Controller-Get-Pods.png)
 
 
-# Kubernetes Ingress
+
 
 ### Apply
 
 ![alt text](Outputs/Kubectl-Ingress-Apply-Get-Ingress.png)
+
+
+### CI/CD Pipeline
+- Implemented CI/CD using GitHub Actions
+- Automatically builds and pushes Docker image on code changes
+
+---
+
+## Problem Statement 2: Monitoring and Automation
+
+### System Health Monitoring Script
+Monitors:
+- CPU usage
+- Memory usage
+- Disk usage
+
+### Application Health Checker
+Checks:
+- Application availability
+- HTTP status response
+
+---
+
+## Problem Statement 3: Runtime Security
+
+### KubeArmor Implementation
+- Installed KubeArmor
+- Applied Zero Trust Security Policy
+- Detected security violations inside container
+
+---
+
+## Screenshots
+
+### Kubernetes Deployment
+(screenshot here)
+
+### CI/CD Pipeline
+(screenshot here)
+
+### Monitoring Script Output
+(screenshot here)
+
+### KubeArmor Security Logs
+(screenshot here)
+
+---
+
+## Technologies Used
+
+- Docker
+- Kubernetes
+- GitHub Actions
+- Bash scripting
+- Python
+- KubeArmor
+
+
+
