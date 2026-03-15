@@ -28,7 +28,7 @@ This project demonstrates containerization, Kubernetes deployment, CI/CD automat
 
 # Repository Structure 
 
-```markdown
+```bash
 wisecow-demo
 │
 ├── wisecow-app
@@ -62,7 +62,13 @@ wisecow-demo
 
 #  Project Architecture 
 
-
+```bash
+User → Ingress → Service → Pod (Wisecow App)
+                ↑
+           Docker Image
+                ↑
+           GitHub Actions CI/CD
+```
 
 This Wisecow DevOps project demonstrates a complete DevOps workflow:
 
