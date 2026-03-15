@@ -192,9 +192,9 @@ The application was exposed using a NodePort Service, allowing external access t
 
 
 ```bash 
-kubectl apply -f kubernetes/deployment.yaml
-kubectl apply -f kubernetes/service.yaml
-kubectl apply -f kubernetes/ingress.yaml
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+kubectl apply -f k8s/ingress.yaml
 ```
 
 #### Verify Reosurces
@@ -241,7 +241,9 @@ You can access the application using:
 minikube service wisecow-service
 
 ```
-Or using the NodePort IP: http://<minikube-ip>:<nodeport>
+Or using the NodePort IP:
+
+http://<minikube-ip>:<nodeport>
 
 
 ![alt text](Outputs/Access-Service-Minikube-Service-Wisecow-Service.png)
