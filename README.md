@@ -166,6 +166,8 @@ The Docker image was pushed to Docker Hub for remote access.
 #### Docker Desktop Images
 ![alt text](Outputs/Docker-Desktop-Images.png)
 
+## 3. Push Image To The Docker Hub
+
 #### Login to docker hub 
 ![alt text](Outputs/Docker-Hub-Login-In-Bash.png)
 
