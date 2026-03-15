@@ -45,6 +45,7 @@ wisecow-demo
 └── README.md
 ```
 
+---
 
 ## Problem Statement 1: Containerization and Deployment
 
@@ -53,55 +54,58 @@ wisecow-demo
 - Built Docker image
 - Pushed image to DockerHub
 
-## Application Output
 
-### Running Container
+#### Running Container
 ```bash
 docker ps
 ```
 ![Running Container](Outputs/Containers-Created.png)
 
 
-### Browser Output
+#### Browser Output
 ![alt text](Outputs/App-Local-Test-4499.png)
 
-### Curl Output
+#### Curl Output
 ![alt text](Outputs/App-Cmd-Line-Test-Curl.png)
 
-### Docker Images
+#### Docker Images
 
 ![alt text](Outputs/Docker-Image-Cmd-Output.png)
 
-### Docker Hub Repsitories
+#### Docker Hub Repsitories
 The Docker image was pushed to Docker Hub for remote access.
 
 ![alt text](Outputs/Docker-Hub-Repo.png)
 ![alt text](Outputs/DockerHub-Repo-Wisecow-General.png)
 
-### Docker Desktop Images
+#### Docker Desktop Images
 ![alt text](Outputs/Docker-Desktop-Images.png)
 
-### Login to docker hub 
+#### Login to docker hub 
 ![alt text](Outputs/Docker-Hub-Login-In-Bash.png)
 
-### Docker Push 
+#### Docker Push 
 ![alt text](Outputs/Docker-Push-Bash-Cmd.png)
 
-### Step 2 :  Kubernetes Deployment
+---
+
+### Step 2 :  Kubernetes 
 - Created Deployment YAML
 - Exposed application using NodePort Service
 - Configured Ingress for domain-based routing
 
 ![alt text](Outputs/Minikube-Kubectl-Versions.png)
 
-### Start Minikube
+### Kubernetes Deployment
+
+#### Start Minikube
 
 ```bash
 
 minikube start
 ```
 
-### Verify Cluster Is Running
+#### Verify Cluster Is Running
 
 ```bash
 kubectl get nodes
@@ -109,7 +113,7 @@ kubectl get nodes
 ![alt text](Outputs/Kubectl-Get-Nodes-Verify-Cluster-Running.png)
 
 
-### Apply Deployment 
+#### Apply Deployment 
 
 
 ![alt text](Outputs/Kubectl-Apply-Deployment-Get-Pods.png)
@@ -117,29 +121,30 @@ kubectl get nodes
 
 ![alt text](Outputs/Kubectl-Logs-Get-Deployments-Pods.png)
 
+---
 
-
-# Kubernetes Service
+### Kubernetes Service
 
 ![alt text](Outputs/Kubectl-Apply-Service-Get-Service.png)
 
-### Access  the Application:
+#### Access  the Application:
 
 ![alt text](Outputs/Access-Service-Minikube-Service-Wisecow-Service.png)
 
-### Verify
+#### Verify
 
 ![alt text](Outputs/Verifying-Kubernetes-Service-Get-Svc.png)
 
 
 ![alt text](Outputs/K8s-Service-Reachable-through-Browser-With-IP.png)
 
+---
 
-# Kubernetes Ingress 
+### Kubernetes Ingress 
 
 ![alt text](Outputs/Enable-Ingress-On-Minikube-Addon.png)
 
-### Verify Ingress Controller
+#### Verify Ingress Controller
 
 
 ![alt text](Outputs/Verify-Ingress-Controller-Get-Pods.png)
@@ -147,10 +152,11 @@ kubectl get nodes
 
 
 
-### Apply
+#### Apply
 
 ![alt text](Outputs/Kubectl-Ingress-Apply-Get-Ingress.png)
 
+---
 
 ### Step 3 : CI/CD Pipeline
 - Implemented CI/CD using GitHub Actions
@@ -158,7 +164,7 @@ kubectl get nodes
 
 
 
-### Github Actions Wisecow Application Ci/Cd Pipeline Run
+#### Github Actions Wisecow Application Ci/Cd Pipeline Run
 ![alt text](Outputs/Github-Actions-Wisecow-CiCD-Pipeline-Run.png)
 
 
@@ -219,55 +225,55 @@ karmor version 1.4.6 windows/amd64 BuildDate=2025-11-20T08:16:36Z
 current version is the latest
 ```
 
-### Install KubeArmor in the Cluster 
+#### Install KubeArmor in the Cluster 
 
 ```bash
 ./karmor.exe install
 ```
 ![alt text](Outputs/Karmor-Install.png)
 
-### Kubectl Get Pods
+#### Kubectl Get Pods
 ![alt text](Outputs/Kubearmor-Kubectl-Get-Pods.png)
 
-### Confirm Wisecom is Still Running
+#### Confirm Wisecom is Still Running
 ![alt text](Outputs/Confirm-Wisecom-is-Still-Running.png)
 
-### Apply Security Policy
+#### Apply Security Policy
 
 
 ![alt text](Outputs/Apply-Security-Policy.png)
 
-### Verify Policy
+#### Verify Policy
 ![alt text](Outputs/Kubearmor-Verify-Policy.png)
 
 
 
 
-### Apply Wisecow Block Sensitive File Policy
+#### Apply Wisecow Block Sensitive File Policy
 
 ![alt text](Outputs/Apply-Wisecow-Block-Sensitive-File-Policy-Configured.png)
 
 
 
-### Verify Policy Exists and Pod Label
+#### Verify Policy Exists and Pod Label
 
 ![alt text](Outputs/Verify-Policy-Exists-and-Pod-Label.png)
 
 
 
 
-### Monitoring Karmor Logs
+#### Monitoring Karmor Logs
 ![alt text](Outputs/Monitoring-Karmor-Logs.png)
 
 
 
-### Wisecow-BLock-Passwd-Access-Policy-Created
+#### Wisecow-BLock-Passwd-Access-Policy-Created
 
 ![alt text](Outputs/Wisecow-Block-Passwd-Access-Policy-Created.png)
 
 
 
-### Policy Created and Policy Details
+#### Policy Created and Policy Details
 
 ![alt text](Outputs/Policy-Created-and-Policy-Details.png)
 
