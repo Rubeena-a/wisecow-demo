@@ -181,7 +181,7 @@ kubectl get svc
 kubectl get ingress
 
 ```
-### Kubernetes Deployment
+### 1. Kubernetes Deployment
 
 #### Start Minikube
 
@@ -207,7 +207,7 @@ kubectl get nodes
 
 ---
 
-### Kubernetes Service
+### 2. Kubernetes Service
 
 ![alt text](Outputs/Kubectl-Apply-Service-Get-Service.png)
 
@@ -232,7 +232,7 @@ http://<minikube-ip>:<nodeport>
 
 ---
 
-### Kubernetes Ingress 
+### 3. Kubernetes Ingress 
 
 ![alt text](Outputs/Enable-Ingress-On-Minikube-Addon.png)
 
