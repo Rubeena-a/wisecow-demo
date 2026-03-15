@@ -76,7 +76,13 @@ This Wisecow DevOps project demonstrates a complete DevOps workflow:
 6. Monitoring scripts track system and application health.
 7. KubeArmor enforces runtime security policies inside containers.
 
+---
 
+## Project Demonstration Screenshots
+
+The following screenshots shows the implementation of the Wisecow DevOps workflow, including Docker container creation, Kubernetes deployment, CI/CD pipeline execution, monitoring outputs, and runtime security enforcement using KubeArmor.
+
+---
 
 ## Technologies Used
 
@@ -94,7 +100,6 @@ This Wisecow DevOps project demonstrates a complete DevOps workflow:
 
 ### Step 1 : Dockerization
 
-## Dockerization
 
 The Wisecow application was containerized using Docker to ensure portability and consistency across environments. A Dockerfile was created to package the application along with its dependencies into a lightweight container image.
 
