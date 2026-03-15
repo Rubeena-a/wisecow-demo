@@ -124,6 +124,15 @@ Monitors:
 - Memory usage
 - Disk usage
 
+
+#### When System Is On High CPU Usage
+
+![alt text](Outputs/System-Health-When-System-Is-On-High-CPU-Usage.png)
+
+#### Normal System State
+
+CPU, memory, and disk usage are below the alert threshold.
+
 ### Application Health Checker
 Checks:
 - Application availability
