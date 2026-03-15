@@ -62,6 +62,35 @@ wisecow-demo
 
 ---
 
+#  Project Architecture 
+
+```markdown
+## Project Architecture
+
+The Wisecow DevOps project demonstrates a complete DevOps workflow:
+
+1. The Wisecow shell application is containerized using Docker.
+2. The container image is pushed to DockerHub.
+3. Kubernetes deploys the container using Deployment and Service resources.
+4. Ingress provides domain-based access to the application.
+5. GitHub Actions automates the CI/CD pipeline.
+6. Monitoring scripts track system and application health.
+7. KubeArmor enforces runtime security policies inside containers.
+
+```
+
+## Technologies Used
+
+- Docker
+- Kubernetes
+- GitHub Actions
+- Bash scripting
+- Python
+- KubeArmor
+  
+---
+
+
 ## Problem Statement 1: Containerization and Deployment
 
 ### Step 1 : Dockerization
@@ -379,35 +408,6 @@ karmor logs
 ---
 
 
----
-
-#  Project Architecture 
-
-```markdown
-## Project Architecture
-
-The Wisecow DevOps project demonstrates a complete DevOps workflow:
-
-1. The Wisecow shell application is containerized using Docker.
-2. The container image is pushed to DockerHub.
-3. Kubernetes deploys the container using Deployment and Service resources.
-4. Ingress provides domain-based access to the application.
-5. GitHub Actions automates the CI/CD pipeline.
-6. Monitoring scripts track system and application health.
-7. KubeArmor enforces runtime security policies inside containers.
-
-```
-
-## Technologies Used
-
-- Docker
-- Kubernetes
-- GitHub Actions
-- Bash scripting
-- Python
-- KubeArmor
-
-
 ## Future Improvements
 
 - Integrate Prometheus and Grafana for advanced monitoring
@@ -417,6 +417,10 @@ The Wisecow DevOps project demonstrates a complete DevOps workflow:
 
 
 
+---
 
+## Author 
+
+Rubeena Shaik
 
 
