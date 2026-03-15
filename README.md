@@ -133,6 +133,11 @@ Monitors:
 
 CPU, memory, and disk usage are below the alert threshold.
 
+![alt text](Outputs/Normal-System-State.png)
+
+No alerts → system is healthy.
+
+
 ### Application Health Checker
 Checks:
 - Application availability
