@@ -30,7 +30,7 @@ Before running this project, ensure the following tools are installed on your sy
 
 # Repository Structure 
 
-```bash
+```markdown
 wisecow-demo
 │
 ├── wisecow-app
@@ -331,8 +331,7 @@ kubectl apply -f kubearmor/kubearmor-policy.yaml
 
 ![alt text](Outputs/Apply-Security-Policy.png)
 
-Monitor security events:
-karmor logs
+
 
 #### Verify Policy
 ![alt text](Outputs/Kubearmor-Verify-Policy.png)
@@ -354,6 +353,12 @@ karmor logs
 
 
 #### Monitoring Karmor Logs
+Monitor security events:
+
+```bash
+karmor logs
+```
+
 ![alt text](Outputs/Monitoring-Karmor-Logs.png)
 
 
@@ -374,7 +379,24 @@ karmor logs
 ---
 
 
+---
 
+#  Project Architecture 
+
+```markdown
+## Project Architecture
+
+The Wisecow DevOps project demonstrates a complete DevOps workflow:
+
+1. The Wisecow shell application is containerized using Docker.
+2. The container image is pushed to DockerHub.
+3. Kubernetes deploys the container using Deployment and Service resources.
+4. Ingress provides domain-based access to the application.
+5. GitHub Actions automates the CI/CD pipeline.
+6. Monitoring scripts track system and application health.
+7. KubeArmor enforces runtime security policies inside containers.
+
+```
 
 ## Technologies Used
 
@@ -386,6 +408,12 @@ karmor logs
 - KubeArmor
 
 
+## Future Improvements
+
+- Integrate Prometheus and Grafana for advanced monitoring
+- Implement Helm charts for Kubernetes deployments
+- Add automated security scanning in CI/CD
+- Deploy the application to a cloud Kubernetes cluster (EKS / GKE / AKS)
 
 
 
