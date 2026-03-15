@@ -64,7 +64,7 @@ wisecow-demo
 
 #  Project Architecture 
 
-```markdown
+
 
 This Wisecow DevOps project demonstrates a complete DevOps workflow:
 
@@ -76,7 +76,7 @@ This Wisecow DevOps project demonstrates a complete DevOps workflow:
 6. Monitoring scripts track system and application health.
 7. KubeArmor enforces runtime security policies inside containers.
 
-```
+
 
 ## Technologies Used
 
