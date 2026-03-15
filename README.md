@@ -93,6 +93,13 @@ This Wisecow DevOps project demonstrates a complete DevOps workflow:
 ## Problem Statement 1: Containerization and Deployment
 
 ### Step 1 : Dockerization
+
+## Dockerization
+
+The Wisecow application was containerized using Docker to ensure portability and consistency across environments. A Dockerfile was created to package the application along with its dependencies into a lightweight container image.
+
+After building the image locally, it was pushed to DockerHub so that it can be easily pulled and deployed in Kubernetes clusters or other environments. Containerization helps simplify the deployment process and ensures the application runs consistently across different systems.
+
 - Created Dockerfile for Wisecow application
 - Built Docker image
 - Pushed image to DockerHub
@@ -101,6 +108,7 @@ This Wisecow DevOps project demonstrates a complete DevOps workflow:
 
 
 Run the Wisecow application:
+
 ```bash
 bash wisecow-app/wisecow.sh
 ```
@@ -159,6 +167,11 @@ The Docker image was pushed to Docker Hub for remote access.
 ---
 
 ### Step 2 :  Kubernetes 
+
+The containerized Wisecow application was deployed to a Kubernetes cluster using Minikube. A Kubernetes Deployment resource was created to manage the application pods and ensure high availability.
+
+The application was exposed using a NodePort Service, allowing external access to the application from the browser. Additionally, an Ingress resource was configured to demonstrate domain-based routing and simulate a real production environment setup.
+
 - Created Deployment YAML
 - Exposed application using NodePort Service
 - Configured Ingress for domain-based routing
@@ -251,6 +264,12 @@ http://<minikube-ip>:<nodeport>
 ---
 
 ### Step 3 : CI/CD Pipeline
+
+
+A Continuous Integration and Continuous Deployment (CI/CD) pipeline was implemented using GitHub Actions. The pipeline automatically triggers whenever changes are pushed to the repository.
+
+The workflow builds the Docker image, authenticates with DockerHub, and pushes the updated image to the DockerHub repository. This automation ensures faster and more reliable deployments while reducing manual effort in the build and release process.
+
 - Implemented CI/CD using GitHub Actions
 - Automatically builds and pushes Docker image on code changes
 
@@ -274,7 +293,13 @@ http://<minikube-ip>:<nodeport>
 
 ## Problem Statement 2: Monitoring and Automation
 
-### System Health Monitoring Script
+To improve system reliability and observability, monitoring scripts were implemented to track system health and application availability.
+
+A Bash-based system health monitoring script checks CPU usage, memory consumption, and disk utilization, generating alerts when resource usage exceeds defined thresholds.
+
+In addition, a Python-based application health checker script continuously verifies whether the Wisecow application is reachable and responding correctly to HTTP requests. These scripts help simulate basic monitoring practices used in production environments.
+
+### 1. System Health Monitoring Script
 Monitors:
 - CPU usage
 - Memory usage
@@ -301,7 +326,7 @@ CPU, memory, and disk usage are below the alert threshold.
 No alerts → system is healthy.
 
 
-### Application Health Checker
+### 2. Application Health Checker
 This Python script verifies if the application is reachable.
 Checks:
 - Application availability
@@ -318,7 +343,14 @@ python scripts/app_health_checker.py
 
 ---
 
-## Problem Statement 3: Runtime Security
+## Problem Statement 3: Runtime Security with KubeArmor
+
+
+Runtime security was implemented using KubeArmor, a Kubernetes security enforcement system that applies container-level security policies.
+
+A security policy was created to restrict unauthorized access to sensitive files within the container, such as the `/etc/passwd` file. When a process attempts to access restricted files, KubeArmor detects the violation and logs the event.
+
+This demonstrates the implementation of Zero Trust security principles and highlights how runtime protection can prevent unauthorized activities inside containers.
 
 ### KubeArmor Implementation
 - Installed KubeArmor
