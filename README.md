@@ -11,6 +11,21 @@ This project demonstrates containerization, Kubernetes deployment, CI/CD automat
 
 ---
 
+## Prerequisites
+
+Before running this project, ensure the following tools are installed on your system:
+
+- Docker
+- Kubernetes
+- Minikube
+- Kubectl
+- Git
+- Python 3
+- Bash (or Git Bash for Windows)
+- KubeArmor CLI (karmor)
+
+---
+
 
 
 # Repository Structure 
@@ -54,19 +69,45 @@ wisecow-demo
 - Built Docker image
 - Pushed image to DockerHub
 
+## 1. Run the Application Locally 
 
-#### Running Container
+
+Run the Wisecow application:
 ```bash
-docker ps
+bash wisecow-app/wisecow.sh
 ```
-![Running Container](Outputs/Containers-Created.png)
-
+Open the application in browser:
+[http://localhost:4499
+](url)
 
 #### Browser Output
 ![alt text](Outputs/App-Local-Test-4499.png)
 
 #### Curl Output
 ![alt text](Outputs/App-Cmd-Line-Test-Curl.png)
+
+
+## 2. Build and Run Docker Container
+
+### Build Docker Image
+
+Build the Docker image locally:
+```bash
+docker build -t wisecow-app -f docker/Dockerfile .
+```
+
+Run the container:
+```bash
+docker run -d -p 4499:4499 wisecow-app
+```
+
+#### Running Container
+Verify the container is running:
+
+```bash
+docker ps
+```
+![Running Container](Outputs/Containers-Created.png)
 
 #### Docker Images
 
@@ -96,6 +137,22 @@ The Docker image was pushed to Docker Hub for remote access.
 
 ![alt text](Outputs/Minikube-Kubectl-Versions.png)
 
+#### Apply Kubernetes manifests:
+
+
+```bash 
+kubectl apply -f kubernetes/deployment.yaml
+kubectl apply -f kubernetes/service.yaml
+kubectl apply -f kubernetes/ingress.yaml
+```
+
+#### Verify Reosurces
+```bash
+kubectl get pods
+kubectl get svc
+kubectl get ingress
+
+```
 ### Kubernetes Deployment
 
 #### Start Minikube
@@ -115,10 +172,9 @@ kubectl get nodes
 
 #### Apply Deployment 
 
-
 ![alt text](Outputs/Kubectl-Apply-Deployment-Get-Pods.png)
 
-
+#### Verify Resources
 ![alt text](Outputs/Kubectl-Logs-Get-Deployments-Pods.png)
 
 ---
@@ -128,6 +184,14 @@ kubectl get nodes
 ![alt text](Outputs/Kubectl-Apply-Service-Get-Service.png)
 
 #### Access  the Application:
+You can access the application using:
+
+```bash
+minikube service wisecow-service
+
+```
+Or using the NodePort IP:
+http://<minikube-ip>:<nodeport>
 
 ![alt text](Outputs/Access-Service-Minikube-Service-Wisecow-Service.png)
 
@@ -188,6 +252,13 @@ Monitors:
 - Memory usage
 - Disk usage
 
+### Run Monitoring Scripts
+
+Run the script:
+
+```bash
+bash scripts/system_health_monitor.sh
+```
 
 #### When System Is On High CPU Usage
 
@@ -203,9 +274,17 @@ No alerts → system is healthy.
 
 
 ### Application Health Checker
+This Python script verifies if the application is reachable.
 Checks:
 - Application availability
 - HTTP status response
+
+#### Run the script:
+
+```bash
+python scripts/app_health_checker.py
+```
+
 
 ![alt text](Outputs/Monitoring-App-Health-Not-Reachable.png)
 
@@ -224,8 +303,13 @@ $ ./karmor.exe version
 karmor version 1.4.6 windows/amd64 BuildDate=2025-11-20T08:16:36Z
 current version is the latest
 ```
+## Security Testing with KubeArmor
+
+KubeArmor is used to enforce runtime security policies inside containers.
+
 
 #### Install KubeArmor in the Cluster 
+Install KubeArmor:
 
 ```bash
 ./karmor.exe install
@@ -238,10 +322,17 @@ current version is the latest
 #### Confirm Wisecom is Still Running
 ![alt text](Outputs/Confirm-Wisecom-is-Still-Running.png)
 
-#### Apply Security Policy
 
+#### Apply Security Policy
+Apply the security policy:
+```bash
+kubectl apply -f kubearmor/kubearmor-policy.yaml
+```
 
 ![alt text](Outputs/Apply-Security-Policy.png)
+
+Monitor security events:
+karmor logs
 
 #### Verify Policy
 ![alt text](Outputs/Kubearmor-Verify-Policy.png)
