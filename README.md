@@ -66,7 +66,7 @@ wisecow-demo
 
 ```markdown
 
-The Wisecow DevOps project demonstrates a complete DevOps workflow:
+This Wisecow DevOps project demonstrates a complete DevOps workflow:
 
 1. The Wisecow shell application is containerized using Docker.
 2. The container image is pushed to DockerHub.
