@@ -33,8 +33,8 @@ wisecow-demo
 │   └── kubearmor-policy.yaml
 │
 ├── scripts
-│   ├── system_health_monitor.sh
-│   └── app_health_checker.py
+│   ├── system_health.sh
+│   └── app_health.py
 │
 ├── Outputs
 │   └── (All screenshots)
