@@ -115,7 +115,7 @@ Run the Wisecow application:
 ```bash
 bash wisecow-app/wisecow.sh
 ```
-Open the application in browser: [Open Wisecow App](http://localhost:4499)
+Open the application in browser: http://localhost:4499
 
 
 #### Browser Output
