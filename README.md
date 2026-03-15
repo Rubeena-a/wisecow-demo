@@ -16,7 +16,7 @@ This project demonstrates containerization, Kubernetes deployment, CI/CD automat
 # Repository Structure 
 
 ```bash
-wisecow-devops-project
+wisecow-demo
 │
 ├── wisecow-app
 │   └── wisecow.sh
@@ -48,7 +48,7 @@ wisecow-devops-project
 
 ## Problem Statement 1: Containerization and Deployment
 
-### Dockerization
+### Step 1 : Dockerization
 - Created Dockerfile for Wisecow application
 - Built Docker image
 - Pushed image to DockerHub
@@ -73,6 +73,8 @@ docker ps
 ![alt text](Outputs/Docker-Image-Cmd-Output.png)
 
 ### Docker Hub Repsitories
+The Docker image was pushed to Docker Hub for remote access.
+
 ![alt text](Outputs/Docker-Hub-Repo.png)
 ![alt text](Outputs/DockerHub-Repo-Wisecow-General.png)
 
@@ -85,7 +87,7 @@ docker ps
 ### Docker Push 
 ![alt text](Outputs/Docker-Push-Bash-Cmd.png)
 
-### Kubernetes Deployment
+### Step 2 :  Kubernetes Deployment
 - Created Deployment YAML
 - Exposed application using NodePort Service
 - Configured Ingress for domain-based routing
@@ -150,7 +152,7 @@ kubectl get nodes
 ![alt text](Outputs/Kubectl-Ingress-Apply-Get-Ingress.png)
 
 
-### CI/CD Pipeline
+### Step 3 : CI/CD Pipeline
 - Implemented CI/CD using GitHub Actions
 - Automatically builds and pushes Docker image on code changes
 
@@ -238,6 +240,9 @@ current version is the latest
 ### Verify Policy
 ![alt text](Outputs/Kubearmor-Verify-Policy.png)
 
+
+
+
 ### Apply Wisecow Block Sensitive File Policy
 
 ![alt text](Outputs/Apply-Wisecow-Block-Sensitive-File-Policy-Configured.png)
@@ -255,12 +260,12 @@ current version is the latest
 ![alt text](Outputs/Monitoring-Karmor-Logs.png)
 
 
+
 ### Wisecow-BLock-Passwd-Access-Policy-Created
 
 ![alt text](Outputs/Wisecow-Block-Passwd-Access-Policy-Created.png)
 
 
-## Attempt to Access Blocked File
 
 ### Policy Created and Policy Details
 
@@ -272,21 +277,7 @@ current version is the latest
 ---
 
 
-## Screenshots
 
-### Kubernetes Deployment
-(screenshot here)
-
-### CI/CD Pipeline
-(screenshot here)
-
-### Monitoring Script Output
-(screenshot here)
-
-### KubeArmor Security Logs
-(screenshot here)
-
----
 
 ## Technologies Used
 
