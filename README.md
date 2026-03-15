@@ -90,12 +90,12 @@ The following screenshots shows the implementation of the Wisecow DevOps workflo
 
 ## Technologies Used
 
-- Docker
-- Kubernetes
-- GitHub Actions
-- Bash scripting
-- Python
-- KubeArmor
+- **Docker** – Containerizes the Wisecow application to ensure consistent environments.
+- **Kubernetes** – Manages and orchestrates container deployment.
+- **GitHub Actions** – Automates CI/CD pipeline for building and pushing images.
+- **Bash** – Used for system health monitoring scripts.
+- **Python** – Used to check application availability.
+- **KubeArmor** – Enforces runtime security policies inside containers.
   
 ---
 
@@ -114,7 +114,14 @@ After building the image locally, it was pushed to DockerHub so that it can be e
 - Pushed image to DockerHub
 
 ## 1. Run the Application Locally 
+## Quick Start
 
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/wisecow-demo.git
+cd wisecow-demo
+```
 
 Run the Wisecow application:
 
