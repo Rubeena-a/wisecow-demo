@@ -65,7 +65,6 @@ wisecow-demo
 #  Project Architecture 
 
 ```markdown
-## Project Architecture
 
 The Wisecow DevOps project demonstrates a complete DevOps workflow:
 
