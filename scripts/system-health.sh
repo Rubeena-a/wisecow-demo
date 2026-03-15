@@ -13,3 +13,14 @@ CPU_INT=${CPU%.*}
 if [ "$CPU_INT" -gt 80 ]; then
 echo "ALERT: CPU usage is high!"
 fi
+
+MEM_INT=${MEM%.*}   
+if [ "$MEM_INT" -gt 80 ]; then
+echo "ALERT: Memory usage is high!"
+fi
+
+DISK_INT=${DISK%\%}
+if [ "$DISK_INT" -gt 80 ]; then
+echo "ALERT: Disk usage is high!"
+fi
+
