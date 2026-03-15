@@ -13,7 +13,7 @@ This project demonstrates containerization, Kubernetes deployment, CI/CD automat
 
 ## Prerequisites
 
-Before running this project, ensure the following tools are installed on your system:
+Before running this project, ensure the following tools are installed on system:
 
 - Docker
 - Kubernetes
