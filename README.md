@@ -115,9 +115,8 @@ Run the Wisecow application:
 ```bash
 bash wisecow-app/wisecow.sh
 ```
-Open the application in browser:
-[http://localhost:4499
-](url)
+Open the application in browser: [Open Wisecow App](http://localhost:4499)
+
 
 #### Browser Output
 ![alt text](Outputs/App-Local-Test-4499.png)
@@ -234,8 +233,8 @@ You can access the application using:
 minikube service wisecow-service
 
 ```
-Or using the NodePort IP:
-http://<minikube-ip>:<nodeport>
+Or using the NodePort IP: http://<minikube-ip>:<nodeport>
+
 
 ![alt text](Outputs/Access-Service-Minikube-Service-Wisecow-Service.png)
 
